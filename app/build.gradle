@@ -9,6 +9,11 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                cppFlags "-frtti -fexceptions"
+            }
+        }
     }
     buildTypes {
         release {
@@ -16,7 +21,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    buildToolsVersion '26.0.2'
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+
+
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/JniLibs']
+        }
+    }
+    buildToolsVersion '28.0.3'
 }
 
 dependencies {
