@@ -10,6 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 - Android Studio `3.2.1`
 - Java `1.8.0_181`
 - Android SDK `4.4 Kitkat, CMAKE, NDK, LLDB` [Reference](http://hellogohn.com/post_one271)
+- Android OpenCV `3.4.4`
 
 ### And coding style 
 
